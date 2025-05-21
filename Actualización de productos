@@ -1,72 +1,90 @@
+htlm:
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santo Padre</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santo Padre</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: auto;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .whatsapp img {
+      height: 30px;
+      width: 30px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f0f0f0;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Header -->
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Santo Padre</a>
-        </div>
+  <header>
+    <img src="St_Padre.png" alt="Santo Padre Logo" />
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Tienda</a>
+      <a href="#">Carrito</a>
     </nav>
+  </header>
 
-    <!-- Bienvenida -->
-    <header class="bg-light text-center p-5">
-        <h1>Bienvenidos a Santo Padre</h1>
-        <p>Remeras y buzos con diseño urbano y arte original. Cada prenda cuenta una historia.</p>
-    </header>
+  <section class="hero">
+    <h1>Santo Padre</h1>
+    <p>Diseño de remeras y buzos originales, únicos y con estilo. Trabajamos con estampas personalizadas, arte urbano y pedidos para empresas. Hecho con pasión, desde cero.</p>
+  </section>
 
-    <!-- Galería de productos -->
-    <section class="container my-5">
-        <h2 class="text-center mb-4">Nuestros Productos</h2>
-        <div class="row">
+  <a class="whatsapp" href="https://wa.me/543584304732" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+  </a>
 
-            <!-- Buzo Disk -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="producto1.jpg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Buzo Santo</h5>
-                        <p class="card-text">Diseño único hecho a mano. Disponible en varios talles.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chopper Blanco -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="producto2.jpg" class="card-img-top" alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Remera Fe</h5>
-                        <p class="card-text">Remera de algodón con estampado urbano. Edición limitada.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Chopper Black -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="producto3.jpg" class="card-img-top" alt="Producto 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Diseño Personalizado</h5>
-                        <p class="card-text">Trabajos por encargo. Contáctanos para tu idea.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Pie de página -->
-    <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; 2025 Santo Padre Clothes - Hecho con pasión en Argentina</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <footer>
+    &copy; 2025 Santo Padre. Todos los derechos reservados.
+  </footer>
 </body>
 </html>
+
