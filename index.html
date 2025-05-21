@@ -10,26 +10,26 @@
 
   <style>
     :root {
-      --negro-carbon: #0D0D0D;
-      --gris-hormigon: #6E6E6E;
-      --blanco: #FFFFFF;
-      --dorado: #D4AF37;
+      --fondo-oscuro: #1B1B1B;
+      --gris-claro: #E0E0E0;
+      --gris-metal: #B2B2B2;
+      --bronce: #B08D57;
     }
 
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: var(--negro-carbon);
-      color: var(--blanco);
+      background-color: var(--fondo-oscuro);
+      color: var(--gris-claro);
     }
 
     header {
-      background-color: var(--negro-carbon);
+      background-color: #2A2A2A;
       padding: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 2px solid var(--gris-hormigon);
+      border-bottom: 2px solid var(--gris-metal);
     }
 
     header img {
@@ -38,7 +38,7 @@
 
     nav a {
       text-decoration: none;
-      color: var(--blanco);
+      color: var(--gris-claro);
       margin-left: 20px;
       font-weight: 600;
     }
@@ -52,12 +52,12 @@
       font-family: 'UnifrakturCook', cursive;
       font-size: 4em;
       margin-bottom: 10px;
-      color: var(--dorado);
+      color: var(--bronce);
     }
 
     .hero h2 {
-      font-size: 1.5em;
-      color: var(--gris-hormigon);
+      font-size: 1.4em;
+      color: var(--gris-metal);
       font-weight: 400;
       margin-bottom: 30px;
     }
@@ -66,7 +66,46 @@
       font-size: 1.1em;
       max-width: 600px;
       margin: auto;
-      color: var(--blanco);
+      color: var(--gris-claro);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      border: 1px solid var(--gris-metal);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      background: #2A2A2A;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-body h5 {
+      margin: 0 0 10px;
+      font-size: 1.2em;
+      color: var(--bronce);
+    }
+
+    .card-body p {
+      margin: 0;
+      font-size: 0.95em;
+      color: var(--gris-claro);
     }
 
     .whatsapp {
@@ -77,6 +116,7 @@
       border-radius: 50%;
       padding: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 999;
     }
 
     .whatsapp img {
@@ -87,10 +127,10 @@
     footer {
       text-align: center;
       padding: 30px;
-      background-color: var(--negro-carbon);
-      color: var(--gris-hormigon);
+      background-color: #1A1A1A;
+      color: var(--gris-metal);
       font-size: 0.9em;
-      border-top: 1px solid var(--gris-hormigon);
+      border-top: 1px solid var(--gris-metal);
     }
   </style>
 </head>
@@ -115,7 +155,47 @@
     </p>
   </section>
 
-  <a class="whatsapp" href="https://wa.me/543584304732" target="_blank">
+  <!-- Galería de productos -->
+  <section class="gallery">
+    <div class="card">
+      <img src="Pantera.Rosa.jpeg" alt="Pantera Rosa">
+      <div class="card-body">
+        <h5>Pantera Rosa</h5>
+        <p>Diseño retro urbano en color rosa. Cómodo y llamativo.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Chopper_Blanco.png" alt="Chopper Blanco">
+      <div class="card-body">
+        <h5>Chopper Blanco</h5>
+        <p>Estilo clásico sobre fondo blanco. Ideal para destacar.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Focus.png" alt="Focus Hoodie">
+      <div class="card-body">
+        <h5>Focus Hoodie</h5>
+        <p>Diseño minimalista para mantener el enfoque en todo momento.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Take.Minut.jpeg" alt="Take a Minute">
+      <div class="card-body">
+        <h5>Take a Minute</h5>
+        <p>Relajado, original y con mensaje positivo. Estilo vintage moderno.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Daruma.png" alt="Daruma">
+      <div class="card-body">
+        <h5>Daruma</h5>
+        <p>El clásico amuleto japonés para quienes buscan perseverancia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón de WhatsApp con mensaje -->
+  <a class="whatsapp" href="https://wa.me/543584304732?text=Buen%20día%2C%20quería%20saber%20información%20de..." target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
   </a>
 
