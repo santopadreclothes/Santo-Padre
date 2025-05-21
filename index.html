@@ -305,5 +305,39 @@
       window.open(url, '_blank');
     }
   </script>
+  <!-- Formulario de contacto personalizado -->
+<section id="formulario" class="section">
+  <h3>Formulario de contacto</h3>
+  <form action="https://formsubmit.co/indumentaria.santopadre@gmail.com" method="POST">
+    <div style="display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto;">
+      <input type="text" name="nombre" placeholder="Soy..." required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+      <input type="tel" name="telefono" placeholder="Mi teléfono es..." required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+      <input type="email" name="email" placeholder="Mi mail es..." required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+      <textarea name="mensaje" rows="4" placeholder="Estoy interesado en que me contacten por..." required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+      <button type="submit" style="background-color: var(--bronce); color: #000; padding: 10px 20px; font-weight: bold; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
+    </div>
+    <!-- Redirecciona a una página de agradecimiento después de enviar -->
+    <input type="hidden" name="_next" value="https://santopadreclothes.github.io/Santo-Padre/gracias.html">
+    <input type="hidden" name="_captcha" value="false">
+    <p id="mensajeConfirmacion" style="display:none; color: var(--bronce); text-align:center; margin-top:20px; font-weight: bold;">¡Gracias por tu mensaje! Te contactaremos pronto.</p>
+  </form>
+</section>
+<script>
+  // Evita redirección y muestra mensaje
+  const formulario = document.querySelector('#formulario form');
+  formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const datos = new FormData(formulario);
+    fetch(formulario.action, {
+      method: 'POST',
+      body: datos,
+    })
+    .then(() => {
+      document.getElementById('mensajeConfirmacion').style.display = 'block';
+      formulario.reset();
+    })
+    .catch(error => alert('Error al enviar. Intentalo más tarde.'));
+  });
+</script>
 </body>
 </html>
