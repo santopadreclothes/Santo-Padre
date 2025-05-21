@@ -29,7 +29,7 @@
       font-weight: bold;
     }
     .hero {
-      padding: 100px 20px;
+      padding: 100px 20px 60px;
       text-align: center;
     }
     .hero h1 {
@@ -41,6 +41,41 @@
       max-width: 600px;
       margin: auto;
     }
+
+    /* GALERÍA */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-body h5 {
+      margin: 0 0 10px;
+      font-size: 1.2em;
+    }
+    .card-body p {
+      margin: 0;
+      font-size: 0.95em;
+      color: #444;
+    }
+
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -77,6 +112,46 @@
     <p>Diseño de remeras y buzos originales, únicos y con estilo. Trabajamos con estampas personalizadas, arte urbano y pedidos para empresas. Hecho con pasión, desde cero.</p>
   </section>
 
+  <!-- Galería de productos -->
+  <section class="gallery">
+    <div class="card">
+      <img src="Pantera.Rosa.jpeg" alt="Pantera Rosa">
+      <div class="card-body">
+        <h5>Pantera Rosa</h5>
+        <p>Diseño retro urbano en color rosa. Cómodo y llamativo.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Chopper_Blanco.png" alt="Chopper Blanco">
+      <div class="card-body">
+        <h5>Chopper Blanco</h5>
+        <p>Estilo clásico sobre fondo blanco. Ideal para destacar.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Focus.png" alt="Focus Hoodie">
+      <div class="card-body">
+        <h5>Focus Hoodie</h5>
+        <p>Diseño minimalista para mantener el enfoque en todo momento.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Take.Minut.jpeg" alt="Take a Minut">
+      <div class="card-body">
+        <h5>Take a Minute</h5>
+        <p>Relajado, original y con mensaje positivo. Estilo vintage moderno.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Daruma.png" alt="Daruma">
+      <div class="card-body">
+        <h5>Daruma</h5>
+        <p>El clásico amuleto japonés para quien busca perseverancia y fuerza.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón de WhatsApp -->
   <a class="whatsapp" href="https://wa.me/543584304732" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
   </a>
