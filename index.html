@@ -25,6 +25,9 @@
     }
 
     header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       background-color: var(--fondo-header);
       padding: 20px;
       display: flex;
@@ -90,151 +93,39 @@
       color: var(--gris-claro);
     }
 
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background-color: #2A2A2A;
-      border: 1px solid var(--gris-metal);
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    .card img {
-      width: 100%;
-      height: auto;
-    }
-
-    .card h4 {
-      font-family: 'IM Fell English SC', serif;
-      margin: 15px 0 5px;
-      color: var(--bronce);
-    }
-
-    .card p {
-      font-size: 0.95em;
-      padding: 0 10px 15px;
-      color: var(--gris-metal);
-    }
-
-    .card button {
-      background-color: var(--bronce);
-      border: none;
-      padding: 8px 16px;
-      margin-bottom: 15px;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    .carrito-btn {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      background-color: var(--bronce);
-      color: #000;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      z-index: 999;
-      cursor: pointer;
-    }
-
-    .carrito-modal {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #2A2A2A;
-      color: var(--gris-claro);
-      border: 2px solid var(--gris-metal);
-      border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      max-height: 400px;
-      overflow-y: auto;
-      z-index: 1000;
-      display: none;
-    }
-
-    .carrito-modal h4 {
-      color: var(--bronce);
-      font-family: 'IM Fell English SC', serif;
-      margin-bottom: 10px;
-    }
-
-    .carrito-modal ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .carrito-modal ul li {
-      border-bottom: 1px solid var(--gris-metal);
-      padding: 6px 0;
-      font-size: 0.95em;
-    }
-
-    .contacto {
+    .diseñador {
       background-color: #2A2A2A;
       padding: 40px;
+      margin: 40px auto;
       border-radius: 10px;
-      color: var(--gris-claro);
-    }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      border-radius: 50%;
-      padding: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
-
-    .whatsapp img {
-      height: 30px;
-      width: 30px;
-    }
-
-    .store-preview {
-      background-color: #2A2A2A;
-      padding: 60px 20px;
       text-align: center;
     }
 
-    .store-preview h3 {
-      font-family: 'UnifrakturCook', cursive;
-      color: var(--bronce);
-      font-size: 2.5em;
-      margin-bottom: 20px;
+    .diseñador label, .diseñador select, .diseñador input {
+      margin: 10px;
+      padding: 10px;
+      font-size: 1em;
     }
 
-    .store-preview button {
+    .diseñador-preview {
+      border: 1px solid var(--gris-metal);
+      background-color: #fff;
+      color: #000;
+      margin-top: 20px;
+      padding: 20px;
+      min-height: 150px;
+      border-radius: 8px;
+    }
+
+    .carrito-descarga {
+      margin-top: 15px;
       background-color: var(--bronce);
       color: #000;
-      border: none;
-      padding: 10px 20px;
+      padding: 8px 14px;
       font-weight: bold;
-      font-size: 1em;
-      border-radius: 5px;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background-color: #1A1A1A;
-      color: var(--gris-metal);
-      font-size: 0.9em;
-      border-top: 1px solid var(--gris-metal);
     }
   </style>
 </head>
@@ -261,90 +152,47 @@
 
   <section id="nosotros" class="section">
     <h3>Sobre Nosotros</h3>
-    <!-- ...contenido existente sobre la marca... -->
+    <p>Santo Padre es una marca de ropa emergente que ha revolucionado la escena de la moda urbana con su enfoque innovador y su filosofía contracultural. Fundada por un grupo de jóvenes diseñadores apasionados, la marca se ha destacado por su uso creativo de diversas técnicas de impresión, especialmente el método DTF (Direct to Film).</p>
+    <p>La filosofía de diseño de Santo Padre se basa en la fusión de elementos urbanos con una estética contracultural. Sus diseños audaces y provocativos desafían las normas establecidas, reflejando la voz de una generación que busca expresarse de manera auténtica y sin restricciones. Cada prenda es una declaración de individualidad y rebeldía contra lo convencional.</p>
+    <p>El uso de la técnica DTF permite a Santo Padre crear diseños complejos y detallados con una durabilidad excepcional. Esta tecnología les permite plasmar imágenes de alta calidad en una variedad de tejidos, desde algodón hasta materiales sintéticos, sin comprometer la comodidad o la calidad de la prenda.</p>
+    <p>Además del DTF, Santo Padre experimenta con otros métodos de impresión como serigrafía, sublimación y bordado digital, lo que les permite ofrecer una gama diversa de estilos y texturas en sus colecciones. Esta versatilidad en la producción se traduce en piezas únicas que atraen a un público variado, desde amantes de la moda urbana hasta entusiastas del arte alternativo.</p>
+    <p>La marca no solo se enfoca en la estética, sino también en la sostenibilidad. Santo Padre utiliza materiales eco-amigables cuando es posible y se esfuerza por minimizar el desperdicio en su proceso de producción. Esta conciencia ambiental se alinea con su filosofía contracultural, desafiando las prácticas tradicionales de la industria de la moda.</p>
+    <p>En resumen, Santo Padre se ha establecido como una marca de ropa que va más allá de las tendencias pasajeras. Con su enfoque en el diseño urbano, técnicas de impresión innovadoras y una fuerte identidad contracultural, Santo Padre no solo vende ropa, sino que ofrece un medio de expresión para aquellos que buscan desafiar el status quo a través de la moda.</p>
   </section>
 
-  <section class="section">
-    <h3>Algunos de Nuestros Productos</h3>
-    <div class="productos">
-      <div class="card">
-        <img src="Pantera.Rosa.jpeg" alt="Pantera Rosa">
-        <h4>Pantera Rosa</h4>
-        <p>Diseño retro urbano, cómodo y provocador.</p>
-        <button onclick="agregarAlCarrito('Pantera Rosa')">Agregar al carrito</button>
-      </div>
-      <div class="card">
-        <img src="Chopper_Blanco.png" alt="Chopper Blanco">
-        <h4>Chopper Blanco</h4>
-        <p>Estilo clásico sobre fondo blanco. Edición limitada.</p>
-        <button onclick="agregarAlCarrito('Chopper Blanco')">Agregar al carrito</button>
-      </div>
-      <div class="card">
-        <img src="Focus.png" alt="Focus Hoodie">
-        <h4>Focus Hoodie</h4>
-        <p>Remera sobria para mantener el enfoque con estilo.</p>
-        <button onclick="agregarAlCarrito('Focus Hoodie')">Agregar al carrito</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="tienda" class="store-preview">
-    <h3>¡Explorá nuestros diseños!</h3>
-    <p style="max-width:600px; margin:auto; color: var(--gris-metal);">
-      Pronto podrás personalizar tu remera con frases, íconos y diseños únicos desde nuestro diseñador interactivo.
-    </p>
+  <section id="diseñador" class="section diseñador">
+    <h3>Diseñador de Remeras</h3>
+    <label>Color:</label>
+    <select id="color">
+      <option value="Blanco">Blanco</option>
+      <option value="Negro">Negro</option>
+      <option value="Gris">Gris</option>
+    </select>
     <br>
-    <button onclick="alert('El diseñador estará disponible pronto.')">Diseñá tu prenda</button>
+    <label>Texto:</label>
+    <input type="text" id="texto" placeholder="Escribí tu frase">
+    <br>
+    <button onclick="generarPreview()">Previsualizar</button>
+    <div class="diseñador-preview" id="preview">Tu diseño aparecerá aquí.</div>
   </section>
-
-  <section id="contacto" class="section contacto">
-    <h3>Contacto</h3>
-    <p><strong>WhatsApp:</strong> +54 9 3584 304732</p>
-    <p><strong>Email:</strong> indumentaria.santopadre@gmail.com</p>
-    <p><strong>Ubicación:</strong> Las Higueras, Córdoba, Argentina</p>
-  </section>
-
-  <button class="carrito-btn" onclick="toggleCarrito()">🛒 Ver carrito</button>
-  <div id="carritoModal" class="carrito-modal">
-    <h4>Carrito</h4>
-    <ul id="listaCarrito"></ul>
-  </div>
-
-  <a class="whatsapp" href="https://wa.me/543584304732?text=Buen%20día%2C%20quería%20saber%20información%20de..." target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
-  </a>
-
-  <footer>
-    &copy; 2025 Santo Padre. Vestimos actitud.
-  </footer>
 
   <script>
-    const carrito = [];
-
-    function agregarAlCarrito(producto) {
-      carrito.push(producto);
-      mostrarCarrito();
+    function generarPreview() {
+      const color = document.getElementById("color").value;
+      const texto = document.getElementById("texto").value;
+      const vista = document.getElementById("preview");
+      vista.innerHTML = `<strong>Remera ${color}:</strong><br><em>${texto}</em>`;
     }
 
-    function toggleCarrito() {
-      const modal = document.getElementById('carritoModal');
-      modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-      mostrarCarrito();
-    }
-
-    function mostrarCarrito() {
-      const lista = document.getElementById('listaCarrito');
-      lista.innerHTML = '';
-      if (carrito.length === 0) {
-        lista.innerHTML = '<li>El carrito está vacío.</li>';
-      } else {
-        carrito.forEach((item, index) => {
-          const li = document.createElement('li');
-          li.textContent = `${index + 1}. ${item}`;
-          lista.appendChild(li);
-        });
-      }
+    function descargarCarrito() {
+      let contenido = 'Producto\n';
+      carrito.forEach(p => contenido += p + '\n');
+      const blob = new Blob([contenido], { type: 'text/csv' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'pedido_santo_padre.csv';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   </script>
-</body>
-</html>
