@@ -4,76 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Santo Padre</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=UnifrakturCook&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --negro-carbon: #0D0D0D;
+      --gris-hormigon: #6E6E6E;
+      --blanco: #FFFFFF;
+      --dorado: #D4AF37;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fdfdfd;
-      color: #222;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--negro-carbon);
+      color: var(--blanco);
     }
+
     header {
-      background-color: #ffffff;
+      background-color: var(--negro-carbon);
       padding: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-bottom: 2px solid var(--gris-hormigon);
     }
+
     header img {
       height: 60px;
     }
+
     nav a {
       text-decoration: none;
-      color: #222;
+      color: var(--blanco);
       margin-left: 20px;
-      font-weight: bold;
+      font-weight: 600;
     }
+
     .hero {
       padding: 100px 20px 60px;
       text-align: center;
     }
+
     .hero h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: auto;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 4em;
+      margin-bottom: 10px;
+      color: var(--dorado);
     }
 
-    /* GALERÍA */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
-      max-width: 1200px;
+    .hero h2 {
+      font-size: 1.5em;
+      color: var(--gris-hormigon);
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 600px;
       margin: auto;
-    }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      background: #fff;
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .card-body {
-      padding: 15px;
-    }
-    .card-body h5 {
-      margin: 0 0 10px;
-      font-size: 1.2em;
-    }
-    .card-body p {
-      margin: 0;
-      font-size: 0.95em;
-      color: #444;
+      color: var(--blanco);
     }
 
     .whatsapp {
@@ -85,79 +78,50 @@
       padding: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
+
     .whatsapp img {
       height: 30px;
       width: 30px;
     }
+
     footer {
       text-align: center;
       padding: 30px;
-      background-color: #f0f0f0;
-      margin-top: 60px;
+      background-color: var(--negro-carbon);
+      color: var(--gris-hormigon);
+      font-size: 0.9em;
+      border-top: 1px solid var(--gris-hormigon);
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="St_Padre.png" alt="Santo Padre Logo" />
     <nav>
       <a href="#">Inicio</a>
       <a href="#">Tienda</a>
-      <a href="#">Carrito</a>
+      <a href="#">Contacto</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Santo Padre</h1>
-    <p>Diseño de remeras y buzos originales, únicos y con estilo. Trabajamos con estampas personalizadas, arte urbano y pedidos para empresas. Hecho con pasión, desde cero.</p>
+    <h2>Diseño con calle. Ropa con fe.</h2>
+    <p>
+      Somos Santo Padre. Estampamos ideas y estilo en prendas urbanas de alta calidad.
+      Diseños propios y personalizados para empresas con presencia.
+      Ropa con personalidad, para quienes no visten lo que sea.
+    </p>
   </section>
 
-  <!-- Galería de productos -->
-  <section class="gallery">
-    <div class="card">
-      <img src="Pantera.Rosa.jpeg" alt="Pantera Rosa">
-      <div class="card-body">
-        <h5>Pantera Rosa</h5>
-        <p>Diseño retro urbano en color rosa. Cómodo y llamativo.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="Chopper_Blanco.png" alt="Chopper Blanco">
-      <div class="card-body">
-        <h5>Chopper Blanco</h5>
-        <p>Estilo clásico sobre fondo blanco. Ideal para destacar.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="Focus.png" alt="Focus Hoodie">
-      <div class="card-body">
-        <h5>Focus Hoodie</h5>
-        <p>Diseño minimalista para mantener el enfoque en todo momento.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="Take.Minut.jpeg" alt="Take a Minut">
-      <div class="card-body">
-        <h5>Take a Minute</h5>
-        <p>Relajado, original y con mensaje positivo. Estilo vintage moderno.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="Daruma.png" alt="Daruma">
-      <div class="card-body">
-        <h5>Daruma</h5>
-        <p>El clásico amuleto japonés para quien busca perseverancia y fuerza.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Botón de WhatsApp -->
   <a class="whatsapp" href="https://wa.me/543584304732" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
   </a>
 
   <footer>
-    &copy; 2025 Santo Padre. Todos los derechos reservados.
+    &copy; 2025 Santo Padre. Vestimos actitud.
   </footer>
+
 </body>
 </html>
