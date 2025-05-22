@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Santo Padre</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=IM+Fell+English+SC&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --fondo-oscuro: #2A2A2A; /* más sobrio */
-      --gris-claro: #E0E0E0;
-      --gris-metal: #B2B2B2;
+      --gris-oscuro: #2C2C2C;
+      --gris-medio: #444444;
       --bronce: #B08D57;
-      --fondo-header: #ECECEC;
       --texto-claro: #FFFFFF;
     }
 
@@ -22,37 +20,65 @@
     }
 
     body {
-      margin: 0;
-      background: linear-gradient(135deg, #2A2A2A, #444); 
+      background: linear-gradient(135deg, var(--gris-oscuro), var(--gris-medio));
       font-family: 'Montserrat', sans-serif;
       color: var(--texto-claro);
     }
 
-    h1, h2, h3 {
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
       font-family: 'UnifrakturCook', cursive;
+      font-size: 2.5rem;
       color: var(--bronce);
     }
 
-    /* Imagen de fondo mejor controlada */
-    .hero-bg {
-      position: relative;
-      background-image: url('ruta-a-tu-imagen.jpg'); 
-      background-size: 30%; /* achicado */
-      background-repeat: no-repeat;
-      background-position: top center;
-      opacity: 0.08; /* más sutil */
-      height: 100vh;
-      width: 100%;
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
     }
 
-    .contenido {
-      position: relative;
-      z-index: 2;
-      padding: 2rem;
+    .hero h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--texto-claro);
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
-    }
+<body>
+
+  <header>
+    <h1>Santo Padre</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Estilo urbano con alma sagrada</h2>
+    <p>Diseñamos ropa personalizada para jóvenes y empresas, con identidad, diseño y elegancia.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Santo Padre. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
   </style>
 </head>
     }
