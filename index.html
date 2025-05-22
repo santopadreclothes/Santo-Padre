@@ -4,59 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Santo Padre</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gris-oscuro: #1b1b1b;
-      --gris-metal: #444444;
+      --fondo-oscuro: #1B1B1B;
+      --gris-claro: #E0E0E0;
       --bronce: #B08D57;
-      --blanco: #ffffff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
     body {
-      background: linear-gradient(135deg, var(--gris-oscuro), var(--gris-metal));
+      margin: 0;
+      background: linear-gradient(135deg, #2e2e2e, #4a4a4a);
       font-family: 'Montserrat', sans-serif;
-      color: var(--blanco);
-    }
-
-    header {
-      padding: 20px;
-      text-align: center;
-      background-color: #111;
-    }
-
-    header img {
-      height: 80px;
-    }
-
-    header h1 {
-      font-family: 'UnifrakturCook', cursive;
-      font-size: 2.5rem;
-      color: var(--bronce);
-      margin-top: 10px;
+      color: #f0f0f0;
     }
 
     .hero {
+      position: relative;
+      height: 100vh;
+      background: url('St_Padre.png') no-repeat center center;
+      background-size: contain;
+      background-color: #1b1b1b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 12px;
       text-align: center;
-      padding: 50px 20px;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3.2em;
+      color: #d4af37;
+      text-shadow: 1px 1px 3px #000;
     }
 
     .hero h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+      font-size: 1.6em;
+      color: #eee;
     }
 
     .hero p {
-      font-size: 1rem;
+      font-size: 1.2em;
+      line-height: 1.6;
       color: #ccc;
-      max-width: 600px;
-      margin: 0 auto;
+    }
+
+    .section {
+      padding: 60px 20px;
+      background-color: #2f2f2f;
+      position: relative;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('St_Padre.png');
+      background-repeat: repeat;
+      background-size: 80px;
+      opacity: 0.03;
+      z-index: 0;
+    }
+
+    .section-content {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(0,0,0,0.6);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    h3 {
+      color: #d4af37;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      margin-bottom: 20px;
     }
 
     .whatsapp {
@@ -64,36 +105,47 @@
       bottom: 20px;
       right: 20px;
       background-color: #25D366;
-      padding: 12px 16px;
-      border-radius: 30px;
       color: white;
-      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 50px;
       text-decoration: none;
-      font-size: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 0.9rem;
+      background-color: #111;
       color: #aaa;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="St_Padre.png" alt="Logo Santo Padre" />
-    <h1>Santo Padre</h1>
-  </header>
-
-  <section class="hero">
-    <h2>Estilo urbano con identidad</h2>
-    <p>Ropa personalizada para jóvenes y empresas, con diseño exclusivo, impronta local y elegancia sobria.</p>
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Santo Padre</h1>
+      <h2>Diseño con calle. Ropa con fe.</h2>
+      <p>
+        Somos Santo Padre. Estampamos ideas y estilo en prendas urbanas de alta calidad. Diseños propios y personalizados para empresas con presencia. Ropa con personalidad, para quienes no visten lo que sea.
+      </p>
+    </div>
   </section>
 
-  <a class="whatsapp" href="https://wa.me/543584304732" target="_blank">Escribinos</a>
+  <section id="nosotros" class="section">
+    <h3>Sobre Nosotros</h3>
+    <div class="section-content">
+      <p>Santo Padre es una marca de ropa emergente que ha revolucionado la escena de la moda urbana con su enfoque innovador y su filosofía contracultural. Fundada por un grupo de jóvenes diseñadores apasionados, la marca se ha destacado por su uso creativo de diversas técnicas de impresión, especialmente el método DTF (Direct to Film).</p>
+      <p>La filosofía de diseño de Santo Padre se basa en la fusión de elementos urbanos con una estética contracultural. Sus diseños audaces y provocativos desafían las normas establecidas, reflejando la voz de una generación que busca expresarse de manera auténtica y sin restricciones.</p>
+      <p>Además del DTF, Santo Padre experimenta con serigrafía, sublimación y bordado digital, ofreciendo una gama diversa de estilos. Esta versatilidad en la producción se traduce en piezas únicas que atraen a un público variado.</p>
+      <p>La marca también apuesta por la sostenibilidad, usando materiales eco-amigables y reduciendo el desperdicio.</p>
+    </div>
+  </section>
+
+  <a class="whatsapp" href="https://wa.me/543584304732" target="_blank">WhatsApp</a>
 
   <footer>
     &copy; 2025 Santo Padre. Todos los derechos reservados.
@@ -101,32 +153,6 @@
 
 </body>
 </html>
-
- <section id="inicio" class="hero" style="position: relative; height: 100vh; background: url('St_Padre.png') no-repeat center center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-  <div style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 12px; text-align: center;">
-    <h1 style="font-family: 'Cinzel', serif; font-size: 3.2em; color: #d4af37; text-shadow: 1px 1px 3px #000;">Santo Padre</h1>
-    <h2 style="font-size: 1.6em; color: #eee;">Diseño con calle. Ropa con fe.</h2>
-    <p style="font-size: 1.2em; max-width: 600px; margin: auto; color: #f0f0f0;">
-      Somos Santo Padre. Estampamos ideas y estilo en prendas urbanas de alta calidad. Diseños propios y personalizados para empresas con presencia. Ropa con personalidad, para quienes no visten lo que sea.
-    </p>
-  </div>
-</section>
-
-  <section id="nosotros" class="section" style="background-color: #2f2f2f; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 20px);">
-  <h3 style="color: #d4af37; text-align: center; font-family: 'Cinzel', serif;">Sobre Nosotros</h3>
-  <div style="text-align: center; padding: 20px 0;">
-    <div style="background-image: url('St_Padre.png'); background-size: 80px; background-repeat: repeat; opacity: 0.04; height: 300px; margin-bottom: -300px;"></div>
-  </div>
-  <div style="position: relative; z-index: 1; padding: 20px; background-color: rgba(0,0,0,0.6); border-radius: 10px;">
-    <p style="color: #e0e0e0;">Santo Padre es una marca de ropa emergente que ha revolucionado la escena de la moda urbana con su enfoque innovador y su filosofía contracultural. Fundada por un grupo de jóvenes diseñadores apasionados, la marca se ha destacado por su uso creativo de diversas técnicas de impresión, especialmente el método DTF (Direct to Film).</p>
-    <p style="color: #e0e0e0;">La filosofía de diseño de Santo Padre se basa en la fusión de elementos urbanos con una estética contracultural. Sus diseños audaces y provocativos desafían las normas establecidas, reflejando la voz de una generación que busca expresarse de manera auténtica y sin restricciones. Cada prenda es una declaración de individualidad y rebeldía contra lo convencional.</p>
-    <p style="color: #e0e0e0;">El uso de la técnica DTF permite a Santo Padre crear diseños complejos y detallados con una durabilidad excepcional. Esta tecnología les permite plasmar imágenes de alta calidad en una variedad de tejidos, desde algodón hasta materiales sintéticos, sin comprometer la comodidad o la calidad de la prenda.</p>
-    <p style="color: #e0e0e0;">Además del DTF, Santo Padre experimenta con otros métodos de impresión como serigrafía, sublimación y bordado digital, lo que les permite ofrecer una gama diversa de estilos y texturas en sus colecciones. Esta versatilidad en la producción se traduce en piezas únicas que atraen a un público variado, desde amantes de la moda urbana hasta entusiastas del arte alternativo.</p>
-    <p style="color: #e0e0e0;">La marca no solo se enfoca en la estética, sino también en la sostenibilidad. Santo Padre utiliza materiales eco-amigables cuando es posible y se esfuerza por minimizar el desperdicio en su proceso de producción. Esta conciencia ambiental se alinea con su filosofía contracultural, desafiando las prácticas tradicionales de la industria de la moda.</p>
-    <p style="color: #e0e0e0;">En resumen, Santo Padre se ha establecido como una marca de ropa que va más allá de las tendencias pasajeras. Con su enfoque en el diseño urbano, técnicas de impresión innovadoras y una fuerte identidad contracultural, Santo Padre no solo vende ropa, sino que ofrece un medio de expresión para aquellos que buscan desafiar el status quo a través de la moda.</p>
-  </div>
-</section>
-
 
   <section id="telas" class="section">
     <h3>Nuestras Telas</h3>
