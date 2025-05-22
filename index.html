@@ -475,5 +475,32 @@ function cerrarModal() {
   </p>
   <p style="margin-top: 10px;">&copy; 2025 Santo Padre. Vestimos actitud.</p>
 </footer>
+  <section id="testimonios" class="section">
+  <h3>Tu voz en Santo Padre</h3>
+  <div class="section-content">
+    <p>¿Tenés algo para decirnos? ¡Nos encanta escuchar tu experiencia! Dejanos tu comentario y, si querés, mandanos una foto usando nuestras prendas por WhatsApp.</p>
+    
+    <form id="form-comentario" onsubmit="enviarWhatsApp(); return false;" style="display: flex; flex-direction: column; gap: 10px; max-width: 500px; margin: 0 auto;">
+      <input type="text" id="nombre" placeholder="Tu nombre" required style="padding: 10px; border-radius: 8px; border: none;">
+      <textarea id="mensaje" rows="4" placeholder="Contanos tu experiencia..." required style="padding: 10px; border-radius: 8px; border: none;"></textarea>
+      <button type="submit" style="background-color: #25D366; color: white; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+        Enviar por WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+  function enviarWhatsApp() {
+    const nombre = document.getElementById('nombre').value;
+    const mensaje = document.getElementById('mensaje').value;
+    const numero = '543584304732'; // Tu número sin + ni espacios
+
+    const texto = `Hola! Soy ${nombre}. Quería compartir mi experiencia con Santo Padre:\n\n"${mensaje}"\n\n¡También puedo mandar una foto!`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    
+    window.open(url, '_blank');
+  }
+</script>
 </body>
 </html>
