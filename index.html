@@ -4,17 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Santo Padre</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=IM+Fell+English+SC&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Fuentes: urbana y estilo vaticano -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --fondo-oscuro: #1B1B1B;
+      --gris-oscuro: #1C1C1C;
+      --gris-intermedio: #2F2F2F;
       --gris-claro: #E0E0E0;
-      --gris-metal: #B2B2B2;
       --bronce: #B08D57;
-      --fondo-header: #ECECEC;
+      --blanco: #FFFFFF;
     }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      <body style="margin: 0; background: linear-gradient(135deg, #2e2e2e, #4a4a4a); font-family: 'Poppins', sans-serif; color: white;">;
+      background: linear-gradient(135deg, var(--gris-oscuro), var(--gris-intermedio));
+      font-family: 'Montserrat', sans-serif;
+      color: var(--blanco);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'UnifrakturCook', cursive;
+      color: var(--bronce);
+      letter-spacing: 1px;
+    }
+
+    .hero-bg {
+      position: relative;
+      height: 100vh;
+      background-image: url('ruta-a-tu-imagen-santo-padre.jpg'); /* achicamos visibilidad */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.05;
+    }
+
+    .contenido {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      z-index: 2;
+    }
+  </style>
+</head>
     }
     header {
       position: sticky;
