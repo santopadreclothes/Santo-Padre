@@ -7,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gris-oscuro: #2C2C2C;
-      --gris-medio: #444444;
+      --gris-oscuro: #1b1b1b;
+      --gris-metal: #444444;
       --bronce: #B08D57;
-      --texto-claro: #FFFFFF;
+      --blanco: #ffffff;
     }
 
     * {
@@ -20,58 +20,80 @@
     }
 
     body {
-      background: linear-gradient(135deg, var(--gris-oscuro), var(--gris-medio));
+      background: linear-gradient(135deg, var(--gris-oscuro), var(--gris-metal));
       font-family: 'Montserrat', sans-serif;
-      color: var(--texto-claro);
+      color: var(--blanco);
     }
 
     header {
-      background-color: #111;
       padding: 20px;
       text-align: center;
+      background-color: #111;
+    }
+
+    header img {
+      height: 80px;
     }
 
     header h1 {
       font-family: 'UnifrakturCook', cursive;
       font-size: 2.5rem;
       color: var(--bronce);
+      margin-top: 10px;
     }
 
     .hero {
-      padding: 60px 20px;
       text-align: center;
+      padding: 50px 20px;
     }
 
     .hero h2 {
       font-size: 1.5rem;
       margin-bottom: 10px;
-      color: var(--texto-claro);
     }
 
     .hero p {
       font-size: 1rem;
       color: #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      padding: 12px 16px;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     footer {
-      background-color: #111;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
       font-size: 0.9rem;
-      color: #888;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="St_Padre.png" alt="Logo Santo Padre" />
     <h1>Santo Padre</h1>
   </header>
 
   <section class="hero">
-    <h2>Estilo urbano con alma sagrada</h2>
-    <p>Diseñamos ropa personalizada para jóvenes y empresas, con identidad, diseño y elegancia.</p>
+    <h2>Estilo urbano con identidad</h2>
+    <p>Ropa personalizada para jóvenes y empresas, con diseño exclusivo, impronta local y elegancia sobria.</p>
   </section>
+
+  <a class="whatsapp" href="https://wa.me/543584304732" target="_blank">Escribinos</a>
 
   <footer>
     &copy; 2025 Santo Padre. Todos los derechos reservados.
@@ -79,151 +101,6 @@
 
 </body>
 </html>
-  </style>
-</head>
-    }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: var(--fondo-header);
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid var(--gris-metal);
-    }
-    header img { height: 60px; }
-    nav a {
-      text-decoration: none;
-      color: var(--fondo-oscuro);
-      margin-left: 20px;
-      font-weight: 600;
-    }
-    .hero {
-      padding: 100px 20px 60px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-family: 'IM Fell English SC', serif;
-      font-size: 4em;
-      color: var(--bronce);
-    }
-    .hero h2 {
-      font-size: 1.4em;
-      color: var(--gris-metal);
-      font-weight: 400;
-    }
-    .hero p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: auto;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h3 {
-      font-family: 'UnifrakturCook', cursive;
-      font-size: 2.5em;
-      color: var(--bronce);
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background-color: #2A2A2A;
-      border: 1px solid var(--gris-metal);
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-    }
-    .card h4 {
-      font-family: 'IM Fell English SC', serif;
-      color: var(--bronce);
-    }
-    .card p {
-      color: var(--gris-metal);
-    }
-    .card button {
-      background-color: var(--bronce);
-      border: none;
-      padding: 8px 16px;
-      margin-bottom: 15px;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    .carrito-btn {
-      position: fixed;
-      bottom: 120px;
-      right: 20px;
-      background-color: var(--bronce);
-      color: #000;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: bold;
-      z-index: 999;
-      cursor: pointer;
-    }
-    .carrito-modal {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #2A2A2A;
-      color: var(--gris-claro);
-      border: 2px solid var(--gris-metal);
-      border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      max-height: 400px;
-      overflow-y: auto;
-      z-index: 1000;
-      display: none;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      border-radius: 50%;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
-    .instagram {
-      position: fixed;
-      bottom: 70px;
-      right: 20px;
-      background-color: #E1306C;
-      border-radius: 50%;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      z-index: 999;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="St_Padre.png" alt="Santo Padre Logo">
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Sobre Nosotros</a>
-      <a href="#telas">Telas</a>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
 
  <section id="inicio" class="hero" style="position: relative; height: 100vh; background: url('St_Padre.png') no-repeat center center/cover; display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <div style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 12px; text-align: center;">
