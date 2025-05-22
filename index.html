@@ -100,6 +100,62 @@
       margin-bottom: 20px;
     }
 
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .card h4 {
+      color: #d4af37;
+      margin: 12px 0 8px;
+      font-size: 1.1em;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+
+    .card button {
+      background-color: #d4af37;
+      color: #111;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .card button:hover {
+      background-color: #b08d57;
+    }
+
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -145,18 +201,12 @@
     </div>
   </section>
 
-  <a class="whatsapp" href="https://wa.me/543584304732" target="_blank">WhatsApp</a>
-
-  <footer>
-    &copy; 2025 Santo Padre. Todos los derechos reservados.
-  </footer>
-
-</body>
-</html>
-
+  <!-- SECCIÓN TELAS -->
   <section id="telas" class="section">
     <h3>Nuestras Telas</h3>
-    <p>En Santo Padre elegimos las telas como se elige un credo: con compromiso. Trabajamos con algodón peinado premium de origen argentino, telas mixtas resistentes al desgaste urbano y materiales reciclados de alto rendimiento. Cada prenda está confeccionada para brindar confort y estilo sin sacrificar durabilidad. Nuestra producción se adapta al ritmo de la calle, con acabados suaves, costuras reforzadas y calidad textil garantizada. Porque la ropa también predica, y la nuestra lo hace con cada fibra.</p>
+    <div class="section-content">
+      <p>En Santo Padre elegimos las telas como se elige un credo: con compromiso. Trabajamos con algodón peinado premium de origen argentino, telas mixtas resistentes al desgaste urbano y materiales reciclados de alto rendimiento. Cada prenda está confeccionada para brindar confort y estilo sin sacrificar durabilidad. Nuestra producción se adapta al ritmo de la calle, con acabados suaves, costuras reforzadas y calidad textil garantizada. Porque la ropa también predica, y la nuestra lo hace con cada fibra.</p>
+    </div>
   </section>
 
 <section id="productos" class="section">
