@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Santo Padre</title>
-  <!-- Fuentes: urbana y estilo vaticano -->
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&family=IM+Fell+English+SC&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gris-oscuro: #1C1C1C;
-      --gris-intermedio: #2F2F2F;
+      --fondo-oscuro: #2A2A2A; /* más sobrio */
       --gris-claro: #E0E0E0;
+      --gris-metal: #B2B2B2;
       --bronce: #B08D57;
-      --blanco: #FFFFFF;
+      --fondo-header: #ECECEC;
+      --texto-claro: #FFFFFF;
     }
 
     * {
@@ -22,34 +22,36 @@
     }
 
     body {
-      background: linear-gradient(135deg, var(--gris-oscuro), var(--gris-intermedio));
+      margin: 0;
+      background: linear-gradient(135deg, #2A2A2A, #444); 
       font-family: 'Montserrat', sans-serif;
-      color: var(--blanco);
-      line-height: 1.6;
-      overflow-x: hidden;
+      color: var(--texto-claro);
     }
 
     h1, h2, h3 {
       font-family: 'UnifrakturCook', cursive;
       color: var(--bronce);
-      letter-spacing: 1px;
     }
 
+    /* Imagen de fondo mejor controlada */
     .hero-bg {
       position: relative;
-      height: 100vh;
-      background-image: url('ruta-a-tu-imagen-santo-padre.jpg'); /* achicamos visibilidad */
-      background-size: contain;
+      background-image: url('ruta-a-tu-imagen.jpg'); 
+      background-size: 30%; /* achicado */
       background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.05;
+      background-position: top center;
+      opacity: 0.08; /* más sutil */
+      height: 100vh;
+      width: 100%;
     }
 
     .contenido {
-      position: absolute;
-      top: 30%;
-      left: 10%;
+      position: relative;
       z-index: 2;
+      padding: 2rem;
+    }
+  </style>
+</head>
     }
   </style>
 </head>
